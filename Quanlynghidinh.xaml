@@ -1,0 +1,89 @@
+﻿<Window x:Class="BTL_CNET_NHOM9.Quanlynghidinh"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTL_CNET_NHOM9"
+        mc:Ignorable="d"
+       Title="Quản lý thông tin nghị định" Height="577" Width="1446">
+    <Grid RenderTransformOrigin="0.324,0.515" Height="567" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/ngdinh.jpg"/>
+        </Grid.Background>
+
+        <Button x:Name="btn_Insert" Content="Insert" HorizontalAlignment="Left" Margin="39,363,0,0" VerticalAlignment="Top" Width="98" Click="btn_Insert_Click" RenderTransformOrigin="3.223,-9.928" Height="39" Background="#FF169D1E" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="btn_Update" Content="Update" HorizontalAlignment="Left" Margin="177,363,0,0" VerticalAlignment="Top" Click="btn_Update_Click" Width="95" Height="38" FontSize="18" Background="#FF169D1E" FontWeight="Bold"/>
+        <Label Content="Điều" HorizontalAlignment="Left" Margin="27,78,0,0" VerticalAlignment="Top" Height="26" Width="34"/>
+        <Label Content="Nội dung điều" HorizontalAlignment="Left" Margin="26,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.371,-0.156" Height="26" Width="86"/>
+        <Label Content="Khoản" HorizontalAlignment="Left" Margin="26,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="26" Width="44">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="2.053"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Nội dung khoản" HorizontalAlignment="Left" Margin="27,174,0,0" VerticalAlignment="Top" Height="26" Width="96"/>
+        <Label Content="Mức phạt dưới" HorizontalAlignment="Left" Margin="27,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.034,0.849" Height="26" Width="88"/>
+        <Label Content="Mức phạt trên" HorizontalAlignment="Left" Margin="27,217,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
+        <TextBox x:Name="txt_dieu" HorizontalAlignment="Left" Margin="139,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txt_nd_dieu" HorizontalAlignment="Left" Margin="139,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txt_khoan" HorizontalAlignment="Left" Margin="139,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txt_ndk" HorizontalAlignment="Left" Margin="139,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.494,-1.546" Height="18"/>
+        <TextBox x:Name="txt_mpt" HorizontalAlignment="Left" Margin="139,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txt_mpd" HorizontalAlignment="Left" Margin="142,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="21">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.051"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="btn_ClearData" Content="ClearData" HorizontalAlignment="Left" Margin="101,503,0,0" VerticalAlignment="Top" Width="98" Click="btn_clear_Click" Height="38" Background="#FF169D1E" FontSize="18" FontWeight="Bold"/>
+        <Label Content="TRA CỨU VI PHẠM" HorizontalAlignment="Left" Margin="632,27,0,497" Width="188" Background="#FFE2EDE0" FontSize="20"/>
+
+
+        <Label Content="" HorizontalAlignment="Left" Margin="412,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="26" Width="10">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.681"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="299,86,0,0" Height="453" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1060" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.539"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.191"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <TextBox x:Name="search_txt" HorizontalAlignment="Left" Margin="139,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.489,0.631" Height="22">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.865"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="27,291,0,0" VerticalAlignment="Top" FontSize="14" Height="29" Width="24"/>
+        <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" Height="38" Margin="39,427,0,0" VerticalAlignment="Top" Width="98" FontSize="18" FontWeight="Bold" Background="#FF169D1E" Click="btn_Delete_Click_1"/>
+        <Button x:Name="txt_Search" Content="Search" HorizontalAlignment="Left" Margin="177,427,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Background="#FF169D1E" Height="38" Width="95" Click="txt_Search_Click_1"/>
+
+    </Grid>
+</Window>
